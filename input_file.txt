@@ -1,0 +1,4 @@
+num_masses 32
+alpha 0.0
+C 0.96
+run_name test
