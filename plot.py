@@ -27,12 +27,9 @@ def get_exactsol(time,k):
     return time
 
 if __name__=="__main__":
-    # Read in data file
 
     # We get the data
     data = np.loadtxt('sol.dat')
-    print(type(data))
-    print(data.shape)
     selected_columns = data[:, 1:data.shape[1]-1]
 
     # Find the column in the middle of the selected columns
@@ -58,6 +55,9 @@ if __name__=="__main__":
     solutions = get_exactsol(total_time, dictionary['K'])
     
     """
+    # You can use this code to only plot out one particle's displacement
+    # This graph compares the numerical solution and the exact solution
+
     fig,ax = plt.subplots()
 
     max_value = np.max(data[:,1])
@@ -79,6 +79,7 @@ if __name__=="__main__":
     plt.savefig('PartABadLook',dpi=300)
 
     """
+
 
     """
     This the single mass plot
@@ -126,7 +127,6 @@ if __name__=="__main__":
 
     print("Length of indices", len(indices1))
     
-
     plt.plot(indices1, selected_data[0][:], '-o', label='T_f/4' )
     plt.plot(indices1, selected_data[1][:], '-o',label='T_f/2')
     plt.plot(indices1, selected_data[2][:], '-o',label='T_f3/4')

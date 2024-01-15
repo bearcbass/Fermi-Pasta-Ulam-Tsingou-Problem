@@ -52,7 +52,7 @@ module setup_module
       
 
       ! Just manually setting stuff for fun. (Will be removed later)
-      !nSteps = 1250.0
+      !nSteps = 100.0
       !nSteps = 5000.0
       !dt = 0.00249333
       !alpha = 1.0_fp
